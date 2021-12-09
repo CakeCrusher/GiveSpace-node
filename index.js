@@ -15,7 +15,7 @@ app.post('/scrape_item', async (req, res) => {
   const input = req.body.input;
   const features = await scrapeItemFeatures(input.item_name)
   const createItemRes = await fetchGraphQL(CREATE_ITEM, {
-    "list_id": "5b05ede3-8cb8-4ec3-b83f-4cd3fa22babe",
+    "list_id": input.list_id,
     "image_url": features.image_url,
     "item_url": features.item_url,
     "name": input.item_name,
