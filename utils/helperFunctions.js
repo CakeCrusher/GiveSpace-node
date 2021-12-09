@@ -27,6 +27,7 @@ const scrapeItemFeatures = async (name) => {
   const URL = `https://www.amazon.com/s?k=${formattedItem}&ref=nb_sb_noss_2`
   const amazon_res = await fetch(URL);
   const html = await amazon_res.text();
+  console.log(html)
   const $ = cheerio.load(html);
   const head = $('.s-asin')
   let features
