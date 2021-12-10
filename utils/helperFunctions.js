@@ -52,7 +52,8 @@ const scrapeItemFeatures = async (name) => {
   return features
 }
 
+
 module.exports = {
   fetchGraphQL,
   scrapeItemFeatures
-};
+}
